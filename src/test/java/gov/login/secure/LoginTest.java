@@ -47,4 +47,24 @@ public class LoginTest {
         webElement = webDriver.findElement(by);
         webElement.click();
     }
+
+    @Test
+    public void test4() {
+        WebDriver webDriver = new ChromeDriver();
+        webDriver.navigate().to("https://secure.login.gov/");
+        String xpath = "/html/body/main/div/form/lg-validated-field/div/input";
+        By by = new By.ByXPath(xpath);
+        WebElement webElement = webDriver.findElement(by);
+        webElement.sendKeys("testB@test.com");
+
+        xpath = "/html/body/main/div/form/lg-password-toggle/lg-validated-field/div/input";
+        by = By.xpath(xpath);
+        webElement = webDriver.findElement(by);
+        webElement.sendKeys("a1S@d3F$");
+
+        xpath = "/html/body/main/div/form/lg-submit-button/button";
+        by = By.xpath(xpath);
+        webElement = webDriver.findElement(by);
+        webElement.click();
+    }
 }
