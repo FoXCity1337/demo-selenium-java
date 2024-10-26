@@ -15,4 +15,12 @@ public class LoginPage {
         WebElement loginWebElement = webDriver.findElement(loginBy);
         loginWebElement.sendKeys(login);
     }
+
+    public void fillPasswordField(String password){
+        By passwordBy = By.xpath(LoginXpath.PASSWORD_FIELD);
+        WebElement passwordWebElement = webDriver.findElement(passwordBy);
+        passwordWebElement.sendKeys(password);
+    }
+
+
 }
