@@ -37,4 +37,16 @@ public class LoginTest {
         Assertions.assertEquals(LoginMessage.EMPTY_LOGIN_FIELD, loginPage.getActualMessageWithPassword());
     }
 
+    @Test
+    public void test4() {
+        WebDriver webDriver = new ChromeDriver();
+        webDriver.navigate().to("https://www.netflix.com/login");
+        LoginPage loginPage = new LoginPage(webDriver);
+        String email = "arseni11@gmail.com";
+        loginPage.fillLoginField(email);
+        loginPage.fillPasswordField("zxcvbasdf");
+        loginPage.clickLoginButton();
+        Assertions.assertEquals(LoginMessage.WRONG_PASSWORD + email,
+                loginPage.getActualMessageWithWrongFields());
+    }
 }
