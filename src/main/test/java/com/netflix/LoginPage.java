@@ -22,5 +22,10 @@ public class LoginPage {
         passwordWebElement.sendKeys(password);
     }
 
+    public void clickLoginButton(){
+        By loginButtonBy = By.xpath(LoginXpath.LOGIN_BUTTON);
+        WebElement loginButtonWebElement = webDriver.findElement(loginButtonBy);
+        loginButtonWebElement.click();
+    }
 
 }
