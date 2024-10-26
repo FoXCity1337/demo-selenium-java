@@ -33,4 +33,10 @@ public class LoginPage {
         WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
         return textMessageWebElement.getText();
     }
+
+    public String getActualMessageWithPassword(){
+        By textMessageBy = By.xpath(LoginXpath.EMPTY_LOGIN_FIELD_MESSAGE);
+        WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
+        return textMessageWebElement.getText();
+    }
 }
