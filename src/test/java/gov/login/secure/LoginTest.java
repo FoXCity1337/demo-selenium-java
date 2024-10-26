@@ -12,10 +12,10 @@ public class LoginTest {
     public void test1() {
         WebDriver webDriver = new ChromeDriver();
         webDriver.navigate().to("https://secure.login.gov/");
-        String xpath = "/html/body/main/div/form/lg-submit-button/button";
-        By by = new By.ByXPath(xpath);
-        WebElement webElement = webDriver.findElement(by);
-        webElement.click();
+        String xpath = "//*[@id=\"new_user\"]/lg-captcha-submit-button/lg-spinner-button/button";
+        By submitButtonBy = new By.ByXPath(xpath);
+        WebElement submitButtonWebElement = webDriver.findElement(submitButtonBy);
+        submitButtonWebElement.click();
     }
 
     @Test
@@ -23,14 +23,14 @@ public class LoginTest {
         WebDriver webDriver = new ChromeDriver();
         webDriver.navigate().to("https://secure.login.gov/");
         String xpath = "/html/body/main/div/form/lg-validated-field/div/input";
-        By by = new By.ByXPath(xpath);
-        WebElement webElement = webDriver.findElement(by);
-        webElement.sendKeys("testA@test.com");
+        By emailFieldBy = new By.ByXPath(xpath);
+        WebElement emailDieldWebElement = webDriver.findElement(emailFieldBy);
+        emailDieldWebElement.sendKeys("testA@test.com");
 
-        xpath = "/html/body/main/div/form/lg-submit-button/button";
-        by = By.xpath(xpath);
-        webElement = webDriver.findElement(by);
-        webElement.click();
+        xpath = "//*[@id=\"new_user\"]/lg-captcha-submit-button/lg-spinner-button/button";
+        By submitButtonBy = By.xpath(xpath);
+        WebElement submitButtonWebElement = webDriver.findElement(submitButtonBy);
+        submitButtonWebElement.click();
     }
 
     @Test
@@ -38,14 +38,14 @@ public class LoginTest {
         WebDriver webDriver = new ChromeDriver();
         webDriver.navigate().to("https://secure.login.gov/");
         String xpath = "/html/body/main/div/form/lg-password-toggle/lg-validated-field/div/input";
-        By by = new By.ByXPath(xpath);
-        WebElement webElement = webDriver.findElement(by);
-        webElement.sendKeys("1q2w#E4r");
+        By passwordFieldBy = new By.ByXPath(xpath);
+        WebElement passwordFieldWebElement = webDriver.findElement(passwordFieldBy);
+        passwordFieldWebElement.sendKeys("1q2w#E4r");
 
-        xpath = "/html/body/main/div/form/lg-submit-button/button";
-        by = By.xpath(xpath);
-        webElement = webDriver.findElement(by);
-        webElement.click();
+        xpath = "//*[@id=\"new_user\"]/lg-captcha-submit-button/lg-spinner-button/button";
+        By submitButtonBy = By.xpath(xpath);
+        WebElement submitButtonWebElement = webDriver.findElement(submitButtonBy);
+        submitButtonWebElement.click();
     }
 
     @Test
@@ -53,18 +53,18 @@ public class LoginTest {
         WebDriver webDriver = new ChromeDriver();
         webDriver.navigate().to("https://secure.login.gov/");
         String xpath = "/html/body/main/div/form/lg-validated-field/div/input";
-        By by = new By.ByXPath(xpath);
-        WebElement webElement = webDriver.findElement(by);
-        webElement.sendKeys("testB@test.com");
+        By emailFieldBy = new By.ByXPath(xpath);
+        WebElement emailFieldWebElement = webDriver.findElement(emailFieldBy);
+        emailFieldWebElement.sendKeys("testB@test.com");
 
         xpath = "/html/body/main/div/form/lg-password-toggle/lg-validated-field/div/input";
-        by = By.xpath(xpath);
-        webElement = webDriver.findElement(by);
-        webElement.sendKeys("a1S@d3F$");
+        By passwordFieldBy = By.xpath(xpath);
+        WebElement passwordFieldWebElement = webDriver.findElement(passwordFieldBy);
+        passwordFieldWebElement.sendKeys("a1S@d3F$");
 
-        xpath = "/html/body/main/div/form/lg-submit-button/button";
-        by = By.xpath(xpath);
-        webElement = webDriver.findElement(by);
-        webElement.click();
+        xpath = "//*[@id=\"new_user\"]/lg-captcha-submit-button/lg-spinner-button/button";
+        By submitButtonBy = By.xpath(xpath);
+        WebElement submitButtonWebElement = webDriver.findElement(submitButtonBy);
+        submitButtonWebElement.click();
     }
 }
