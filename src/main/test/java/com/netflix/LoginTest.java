@@ -46,7 +46,6 @@ public class LoginTest {
         loginPage.fillLoginField(email);
         loginPage.fillPasswordField("zxcvbasdf");
         loginPage.clickLoginButton();
-        Assertions.assertEquals(LoginMessage.WRONG_PASSWORD + email,
-                loginPage.getActualMessageWithWrongFields());
+        Assertions.assertEquals(LoginMessage.WRONG_PASSWORD + email, loginPage.getActualMessageWithWrongFields());
     }
 }
