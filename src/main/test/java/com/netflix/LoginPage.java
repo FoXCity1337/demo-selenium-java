@@ -28,4 +28,9 @@ public class LoginPage {
         loginButtonWebElement.click();
     }
 
+    public String getActualMessageWithLogin(){
+        By textMessageBy = By.xpath(LoginXpath.EMPTY_PASSWORD_FIELD_MESSAGE);
+        WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
+        return textMessageWebElement.getText();
+    }
 }
