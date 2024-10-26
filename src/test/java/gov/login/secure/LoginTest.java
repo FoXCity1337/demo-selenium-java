@@ -24,8 +24,8 @@ public class LoginTest {
         webDriver.navigate().to("https://secure.login.gov/");
         String xpath = "/html/body/main/div/form/lg-validated-field/div/input";
         By emailFieldBy = new By.ByXPath(xpath);
-        WebElement emailDieldWebElement = webDriver.findElement(emailFieldBy);
-        emailDieldWebElement.sendKeys("testA@test.com");
+        WebElement emailFieldWebElement = webDriver.findElement(emailFieldBy);
+        emailFieldWebElement.sendKeys("testA@test.com");
 
         xpath = "//*[@id=\"new_user\"]/lg-captcha-submit-button/lg-spinner-button/button";
         By submitButtonBy = By.xpath(xpath);
