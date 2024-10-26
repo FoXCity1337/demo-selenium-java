@@ -45,7 +45,7 @@ public class LoginPage {
 
     public String getActualMessageWithWrongFields(){
         By textMessageBy = By.xpath(LoginXpath.WRONG_FIELD_MESSAGE);
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Окно с ошибкой неверного логина и пароля открывается с задержкой. Узнал о гугл
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Окно с ошибкой неверного логина и пароля открывается с задержкой.
         WebElement textElement = webDriver.findElement(textMessageBy);
         return textElement.getText();
     }
