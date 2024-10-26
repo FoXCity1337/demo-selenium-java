@@ -39,4 +39,11 @@ public class LoginPage {
         WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
         return textMessageWebElement.getText();
     }
+
+    public String getActualMessageWithWrongFields(){
+        By textMessageBy = By.xpath(LoginXpath.WRONG_FIELD_MESSAGE);
+        WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
+        return textMessageWebElement.getText();
+    }
+
 }
