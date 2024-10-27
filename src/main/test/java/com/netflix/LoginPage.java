@@ -31,21 +31,21 @@ public class LoginPage {
         loginButtonWebElement.click();
     }
 
-    public String getActualMessageWithLogin() {
+    public String getEmptyPasswordFieldMessage() {
         By textMessageBy = By.xpath(LoginXpath.EMPTY_PASSWORD_FIELD_MESSAGE);
         WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
         return textMessageWebElement.getText();
     }
 
-    public String getActualMessageWithPassword() {
+    public String getEmptyLoginFieldMessage() {
         By textMessageBy = By.xpath(LoginXpath.EMPTY_LOGIN_FIELD_MESSAGE);
         WebElement textMessageWebElement = webDriver.findElement(textMessageBy);
         return textMessageWebElement.getText();
     }
 
-    public String getActualMessageWithWrongFields() {
+    public String getMessageWithWrongFields() {
         By textMessageBy = By.xpath(LoginXpath.WRONG_FIELD_MESSAGE);
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Окно с ошибкой неверного логина и пароля открывается с задержкой.
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement textElement = webDriver.findElement(textMessageBy);
         return textElement.getText();
     }

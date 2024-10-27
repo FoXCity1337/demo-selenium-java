@@ -13,8 +13,8 @@ public class LoginTest {
         webDriver.navigate().to("https://www.netflix.com/login");
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.clickLoginButton();
-        Assertions.assertEquals(LoginMessage.EMPTY_LOGIN_FIELD, loginPage.getActualMessageWithPassword());
-        Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD_FIELD, loginPage.getActualMessageWithLogin());
+        Assertions.assertEquals(LoginMessage.EMPTY_LOGIN_FIELD, loginPage.getEmptyLoginFieldMessage());
+        Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD_FIELD, loginPage.getEmptyPasswordFieldMessage());
     }
 
     @Test
@@ -24,7 +24,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.fillLoginField("12345@mail.ru");
         loginPage.clickLoginButton();
-        Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD_FIELD, loginPage.getActualMessageWithLogin());
+        Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD_FIELD, loginPage.getEmptyPasswordFieldMessage());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.fillPasswordField("12345qwerty");
         loginPage.clickLoginButton();
-        Assertions.assertEquals(LoginMessage.EMPTY_LOGIN_FIELD, loginPage.getActualMessageWithPassword());
+        Assertions.assertEquals(LoginMessage.EMPTY_LOGIN_FIELD, loginPage.getEmptyLoginFieldMessage());
     }
 
     @Test
@@ -46,6 +46,6 @@ public class LoginTest {
         loginPage.fillLoginField(email);
         loginPage.fillPasswordField("zxcvbasdf");
         loginPage.clickLoginButton();
-        Assertions.assertEquals(LoginMessage.WRONG_PASSWORD + email, loginPage.getActualMessageWithWrongFields());
+        Assertions.assertEquals(LoginMessage.WRONG_PASSWORD + email, loginPage.getMessageWithWrongFields());
     }
 }
