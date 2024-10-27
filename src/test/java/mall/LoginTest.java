@@ -14,4 +14,14 @@ public class LoginTest {
         loginPage.clickLoginButton();
         Assertions.assertEquals(LoginMessage.EMPTY_FIELDS_MESSAGE,loginPage.getErrorMessage());
     }
+
+    @Test
+    public void Test2() {
+        WebDriver webDriver = new ChromeDriver();
+        webDriver.navigate().to("https://emall.by/login/password");
+        LoginPage loginPage = new LoginPage(webDriver);
+        loginPage.fillPhoneNumberField("291384125");
+        loginPage.clickLoginButton();
+        Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD_FIELD_MESSAGE,loginPage.getErrorMessage());
+    }
 }
