@@ -14,13 +14,13 @@ public class LoginPage {
     }
 
     public void fillPhoneNumberField(String number) {
-        By phoneNumberBy = By.xpath(LoginXpath.PHONE_NUMBER_FIELD_XPATH);
+        By phoneNumberBy = By.id(LoginXpath.PHONE_NUMBER_FIELD_ID);
         WebElement phoneNumberWebDriver = webDriver.findElement(phoneNumberBy);
         phoneNumberWebDriver.sendKeys(number);
     }
 
     public void fillPasswordField(String password) {
-        By paswordBy = By.xpath(LoginXpath.PASSWORD_FIELD_XPATH);
+        By paswordBy = By.id(LoginXpath.PASSWORD_FIELD_ID);
         WebElement passwordWebDriver = webDriver.findElement(paswordBy);
         passwordWebDriver.sendKeys(password);
     }
