@@ -28,4 +28,10 @@ public class LoginPage {
         WebElement loginButtonWebDriver = webDriver.findElement(loginButtonBy);
         loginButtonWebDriver.click();
     }
+
+    public String getErrorMessage(){
+        By textMessage = By.xpath(LoginXpath.ERROR_MESSAGE_XPATH);
+        WebElement textMessageWebElement = webDriver.findElement(textMessage);
+        return textMessageWebElement.getText();
+    }
 }
