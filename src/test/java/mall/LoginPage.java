@@ -18,8 +18,14 @@ public class LoginPage {
     }
 
     public void fillPasswordField(String password){
-        By paswordBy = By.xpath(LoginXpath.PHONE_NUMBER_FIELD_XPATH);
-        WebElement phoneNumberWebDriver = webDriver.findElement(paswordBy);
-        phoneNumberWebDriver.sendKeys(password);
+        By paswordBy = By.xpath(LoginXpath.PASSWORD_FIELD_XPATH);
+        WebElement passwordWebDriver = webDriver.findElement(paswordBy);
+        passwordWebDriver.sendKeys(password);
+    }
+
+    public void clickLoginButton(){
+        By loginButtonBy = By.xpath(LoginXpath.LOGIN_BUTTON_XPATH);
+        WebElement loginButtonWebDriver = webDriver.findElement(loginButtonBy);
+        loginButtonWebDriver.click();
     }
 }
