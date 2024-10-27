@@ -1,4 +1,4 @@
-package com.netflix;
+package netflix;
 
 public class LoginMessage {
     public static final String EMPTY_LOGIN_FIELD = "Укажите действительный адрес электронной почты или номер телефона.";
