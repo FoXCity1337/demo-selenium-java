@@ -32,7 +32,7 @@ public class LoginPage {
     }
 
     public String getErrorMessage() {
-        webDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+
         By textMessage = By.xpath(LoginXpath.ERROR_MESSAGE_XPATH);
         WebElement textMessageWebElement = webDriver.findElement(textMessage);
         return textMessageWebElement.getText();
